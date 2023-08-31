@@ -1,4 +1,8 @@
 {
+  "author": {
+    "name": "Cesar Mayora",
+    "email": "cesarmay@protonmail.com"
+  },
   "name": "cmayora-dev",
   "type": "module",
   "version": "0.0.1",
@@ -11,5 +15,13 @@
   },
   "dependencies": {
     "astro": "^3.0.3"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
