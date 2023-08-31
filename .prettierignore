@@ -1,0 +1,16 @@
+# Ignore the public directory
+public/
+
+# Ignore build output directories
+dist/
+.out/
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore version control files
+.git/
+.gitignore
+
+# Ignore temporary files
+*.log
