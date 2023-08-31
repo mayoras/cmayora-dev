@@ -11,13 +11,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint src/"
   },
   "dependencies": {
     "astro": "^3.0.3"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-astro": "^0.29.0"
   },
   "config": {
     "commitizen": {
