@@ -1,0 +1,17 @@
+{
+  "eslint.enable": true,
+  "eslint.probe": [
+    "typescript",
+    "typescriptreact",
+    "html",
+    "markdown",
+    "astro"
+  ],
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "astro"
+  ]
+}
