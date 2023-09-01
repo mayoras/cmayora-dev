@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 
-const NAVBAR_TITLE = 'Cesar Mayora';
-
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => {
@@ -9,7 +7,9 @@ const Navbar: FC<NavbarProps> = () => {
     <nav className="nav-container">
       <div className="nav-links">
         <div className="nav-title">
-          <span>{NAVBAR_TITLE}</span>
+          <span className="font-rubik text-3xl font-thin">
+            cmayora<i className="text-blue-500">.dev</i>
+          </span>
         </div>
         <div className="nav-sections">
           <ul>
