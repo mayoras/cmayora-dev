@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import Link from './Link';
+import NavLink from './NavLink';
 import ThemeToggler from './ThemeToggler';
 import LangSelector from './LangSelector';
 
@@ -23,7 +23,7 @@ const Navbar: FC<NavbarProps> = () => {
             {LINKS.map((link, idx) => {
               return (
                 <li key={idx}>
-                  <Link label={link} to="#" />
+                  <NavLink label={link} to="#" />
                 </li>
               );
             })}
