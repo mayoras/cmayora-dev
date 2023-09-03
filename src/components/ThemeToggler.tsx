@@ -5,7 +5,7 @@ interface ThemeTogglerProps {}
 
 const ThemeToggler: FC<ThemeTogglerProps> = () => {
   return (
-    <div className="nav-theme-toggler text-gray-default cursor-pointer text-3xl text-slate-600 transition-colors ease-in hover:text-black dark:text-white dark:hover:text-slate-400">
+    <div className="nav-theme-toggler cursor-pointer text-3xl text-slate-600 transition-colors ease-in hover:text-black dark:text-white dark:hover:text-slate-400">
       <IoSunny />
     </div>
   );
