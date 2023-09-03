@@ -1,13 +1,14 @@
 import { type FC } from 'react';
-import { HOMEPAGE_URL } from '../config';
+import { HOMEPAGE_URL, SITE_SOURCE_URL } from '../config';
 import NavLink from './NavLink';
 import ThemeToggler from './ThemeToggler';
 import LangSelector from './LangSelector';
 import MenuIcon from './MenuIcon';
+import { IoLogoOctocat } from 'react-icons/io5';
 
 interface NavbarProps {}
 
-const LINKS = ['About', 'Projects', 'Skills', 'Contact'];
+const LINKS = ['About', 'Projects', 'Skills', 'Contact', 'Source'];
 
 const Navbar: FC<NavbarProps> = () => {
   return (
@@ -23,11 +24,24 @@ const Navbar: FC<NavbarProps> = () => {
         <div className="nav-sections text-center text-xl font-thin">
           <ul className="align-items hidden justify-evenly gap-4 md:flex">
             {LINKS.map((link, idx) => {
-              return (
-                <li key={idx}>
-                  <NavLink label={link} to="#" />
-                </li>
-              );
+              if (link !== 'Source') {
+                return (
+                  <li key={idx}>
+                    <NavLink to="#">{link}</NavLink>
+                  </li>
+                );
+              } else {
+                return (
+                  <li key={idx} className="">
+                    <NavLink to={SITE_SOURCE_URL} target="_blank">
+                      <div className="flex items-center gap-1">
+                        <IoLogoOctocat className=" text-slate-800 transition-colors ease-in group-hover:text-purple-500" />
+                        {link}
+                      </div>
+                    </NavLink>
+                  </li>
+                );
+              }
             })}
           </ul>
         </div>
