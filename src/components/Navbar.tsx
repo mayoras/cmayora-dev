@@ -9,12 +9,14 @@ const LINKS = ['About', 'Projects', 'Skills', 'Contact'];
 
 const Navbar: FC<NavbarProps> = () => {
   return (
-    <nav className="nav-container align-items m-auto flex w-[55%] justify-between p-6 font-rubik">
+    <nav className="nav-container align-items fixed m-auto flex w-full justify-center gap-20 p-6 font-rubik shadow-md shadow-sky-500/50 backdrop-blur-sm">
       <div className="nav-links flex items-center justify-between gap-10">
-        <div className="nav-title cursor-pointer items-center">
-          <span className="text-3xl font-thin ">
-            cmayora<i className="text-blue-500">.dev</i>
-          </span>
+        <div className="nav-title items-center">
+          <a href="/" className="outline-none">
+            <span className="text-3xl font-thin ">
+              cmayora<i className="text-blue-500">.dev</i>
+            </span>
+          </a>
         </div>
         <div className="nav-sections text-center text-xl font-thin">
           <ul className="align-items flex justify-evenly gap-4">
