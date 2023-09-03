@@ -2,6 +2,7 @@ import { type FC } from 'react';
 import NavLink from './NavLink';
 import ThemeToggler from './ThemeToggler';
 import LangSelector from './LangSelector';
+import { HOMEPAGE_URL } from '../config';
 
 interface NavbarProps {}
 
@@ -12,7 +13,7 @@ const Navbar: FC<NavbarProps> = () => {
     <nav className="nav-container align-items fixed m-auto flex w-full justify-center gap-32 p-2 font-rubik shadow-md shadow-sky-500/50 backdrop-blur-md">
       <div className="nav-links flex items-center justify-between gap-10">
         <div className="nav-title items-center">
-          <a href="/" className="outline-none">
+          <a href={HOMEPAGE_URL} className="outline-none">
             <span className="text-3xl font-thin ">
               cmayora<i className="text-blue-500">.dev</i>
             </span>
