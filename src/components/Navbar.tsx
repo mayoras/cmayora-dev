@@ -9,7 +9,7 @@ const LINKS = ['About', 'Projects', 'Skills', 'Contact'];
 
 const Navbar: FC<NavbarProps> = () => {
   return (
-    <nav className="nav-container align-items fixed m-auto flex w-full justify-center gap-20 p-6 font-rubik shadow-md shadow-sky-500/50 backdrop-blur-sm">
+    <nav className="nav-container align-items fixed m-auto flex w-full justify-center gap-32 p-2 font-rubik shadow-md shadow-sky-500/50 backdrop-blur-md">
       <div className="nav-links flex items-center justify-between gap-10">
         <div className="nav-title items-center">
           <a href="/" className="outline-none">

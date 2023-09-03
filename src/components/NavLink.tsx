@@ -7,7 +7,7 @@ interface LinkProps {
 
 const NavLink: FC<LinkProps> = ({ label, to }) => {
   return (
-    <div className="cursor-pointer transition-colors hover:text-purple-500">
+    <div className="cursor-pointer transition-colors ease-in hover:text-purple-500">
       <a href={to}>{label}</a>
     </div>
   );
