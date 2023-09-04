@@ -1,23 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Content from '../components/Content.astro';
 import { SITE_TITLE } from '../config';
 ---
 
 <Layout title={SITE_TITLE}>
-  <main>
-    <h1 class="font-rubik font-normal text-black">Hello World!</h1>
+  <main class="m-auto w-[90%] pt-[100px] md:w-[40%]">
+    <h1 class="text-start font-rubik text-3xl font-normal leading-10">
+      👤 About Me
+    </h1>
+    <Content>
+      <section aria-label="Introduction">
+        <h2 class="pb-2 font-normal">🙋 Introduction</h2>
+        <p class="mb-4 font-thin">
+          Hello! My name is Cesar, and I'm a passionate and dedicated computer
+          engineering student who is really interested in technology and all of
+          its possibilities, specially involving the design and building of
+          software. Since I can remember, I've always been curious to know how
+          things really work and why the work, paying special attention to
+          computers, from how they work at the lowest to the highest level and
+          how you can create practically anything you want, with you imagination
+          and creativity being your only limit. Now, everything that started out
+          as a simple curiosity has become in a lifelong pursuit of knowledge
+          and innovation, which has led me to pursue a career in this field.
+        </p>
+      </section>
+      <section aria-label="Education">
+        <h2 class="pb-2 font-normal">🎓 Education</h2>
+        <p class="mb-4 font-thin">
+          I am currently pursuing a Computer Engineering degree at the
+          University of Granada in Spain, where I had the big priviledge of
+          learning all essential knowledge and more about computers, covering
+          all aspects from hardware and software. This academic background has
+          given me important and solid foundation in data structures,
+          algorithms, digital systems, databases, software engineering,
+          programming languages, and more.
+        </p>
+      </section>
+      <section aria-label="Future-Goals">
+        <h2 class="pb-2 font-normal">🎯 Future Goals</h2>
+        <p class="mb-4 font-thin">
+          As I continue my academic journey and soon my professional career, I
+          aspire to use my skills, knowledge and creativity to create solutions
+          that has a positive impact in society as well as being a good teammate
+          that helps others develop in this field. Thank you for visiting my
+          website and for wanting to know more about me, I would love to know
+          about you too, if you want to reach me out feel free to <a
+            class="text-purple-500"
+            href="#contact">contact me</a
+          > 😉.
+        </p>
+      </section>
+    </Content>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  h1 {
-  }
-</style>
