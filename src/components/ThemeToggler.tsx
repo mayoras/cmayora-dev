@@ -1,9 +1,10 @@
 import { type FC, useState, useEffect } from 'react';
-import { IoSunny } from 'react-icons/io5';
+import { IoMoon, IoSunny } from 'react-icons/io5';
 
 interface ThemeTogglerProps {}
 
 const ThemeToggler: FC<ThemeTogglerProps> = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const [theme, setTheme] = useState(() => {
     if (import.meta.env.SSR) {
       return undefined;
@@ -42,13 +43,19 @@ const ThemeToggler: FC<ThemeTogglerProps> = () => {
     }
   }, [theme]);
 
-  return (
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  return isMounted ? (
     <button
       onClick={toggleTheme}
-      className="nav-theme-toggler cursor-pointer text-3xl text-slate-600 transition-colors ease-in hover:text-black dark:text-white dark:hover:text-slate-400"
+      className="nav-theme-toggler cursor-pointer text-3xl text-slate-600 transition-colors ease-in hover:text-black dark:text-slate-400 dark:hover:text-slate-50"
     >
-      <IoSunny />
+      {theme === 'light' ? <IoSunny /> : <IoMoon />}
     </button>
+  ) : (
+    <div />
   );
 };
 
