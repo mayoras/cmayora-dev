@@ -51,6 +51,7 @@ const ThemeToggler: FC<ThemeTogglerProps> = () => {
     <button
       onClick={toggleTheme}
       className="nav-theme-toggler cursor-pointer text-3xl text-slate-600 transition-colors ease-in hover:text-black dark:text-slate-400 dark:hover:text-slate-50"
+      aria-label="Toggle theme"
     >
       {theme === 'light' ? <IoSunny /> : <IoMoon />}
     </button>
