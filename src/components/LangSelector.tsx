@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { IoLanguageOutline } from 'react-icons/io5';
+import { IoLanguageOutline } from 'react-icons/io5/index';
 
 const LANGS = [
   {

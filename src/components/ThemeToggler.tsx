@@ -1,5 +1,5 @@
 import { type FC, useState, useEffect } from 'react';
-import { IoMoon, IoSunny } from 'react-icons/io5';
+import { IoMoon, IoSunny } from 'react-icons/io5/index';
 
 interface ThemeTogglerProps {}
 
