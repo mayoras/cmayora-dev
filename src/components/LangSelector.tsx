@@ -5,10 +5,6 @@ const LANGS = [
   {
     key: 'en',
     name: 'English'
-  },
-  {
-    key: 'es',
-    name: 'Español'
   }
 ];
 

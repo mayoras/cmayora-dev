@@ -50,7 +50,13 @@ const LINKS = ['About', 'Projects', 'Skills', 'Contact', 'Source'];
 
   <div class="nav-config hidden items-center justify-evenly gap-6 md:flex">
     <ThemeToggler client:load />
-    <LangSelector />
+    <div class="flex flex-col items-center text-center">
+      <LangSelector />
+
+      <span class="m-0 p-0 text-sm font-extralight text-red-700"
+        >Under development - only english</span
+      >
+    </div>
   </div>
 
   {/* menu button */}
