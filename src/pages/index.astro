@@ -1,14 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Content from '../components/Content.astro';
+import Socials from '../components/Socials.astro';
 import { SITE_TITLE } from '../config';
 ---
 
 <Layout title={SITE_TITLE}>
-  <main class="m-auto w-[90%] pt-[100px] md:w-[40%]">
-    <h1 class="text-start font-rubik text-3xl font-normal leading-10">
-      👤 About Me
-    </h1>
+  <header
+    class="mast-head relative h-[70vh] w-full bg-orange-100 bg-transparent pt-6 font-rubik shadow-inner duration-500"
+  >
+    <!-- TODO: put video in masthead background -->
+    <video
+      class="absolute left-1/2 top-0 h-[90%] w-full min-w-full -translate-x-1/2 object-cover opacity-20"
+      autoplay
+      loop
+      muted
+      playsinline
+    >
+      <source src="/masthead.mp4" type="video/mp4" />
+       Your browser does not support the video tag.
+    </video>
+
+    <div
+      class="relative flex h-full w-full flex-col items-center justify-center gap-9"
+    >
+      <!-- Avatar? -->
+
+      <!-- Name occupation -->
+      <h1 class="text-6xl font-medium">Cesar Mayora</h1>
+      <h2 class="text-xl font-normal text-purple-700 dark:text-purple-500">
+        Software Engineer
+      </h2>
+
+      <!-- Socials -->
+      <Socials />
+    </div>
+  </header>
+  <main class="m-auto w-[90%] pt-[80px] font-rubik md:w-[40%]">
+    <h1 class="text-start text-3xl font-normal leading-10">👤 About Me</h1>
     <Content>
       <section aria-label="Introduction">
         <h2 class="pb-2 font-normal">🙋 Introduction</h2>
