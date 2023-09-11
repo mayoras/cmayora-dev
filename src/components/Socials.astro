@@ -1,0 +1,43 @@
+---
+import NavLink from './NavLink.astro';
+import type { IconType } from 'react-icons';
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoDiscord
+} from 'react-icons/io5/index';
+
+interface Social {
+  icon: IconType;
+  link: string;
+}
+
+const socials: Social[] = [
+  {
+    icon: IoLogoGithub,
+    link: 'https://www.github.com/mayoras'
+  },
+  {
+    icon: IoLogoLinkedin,
+    link: 'https://www.linkedin.com/in/mayoracesar'
+  },
+  {
+    icon: IoLogoDiscord,
+    link: 'https://discordapp.com/users/617370398677532683'
+  }
+];
+---
+
+<ul class="flex items-center justify-center gap-4 text-4xl">
+  {
+    socials.map(social => {
+      return (
+        <li>
+          <NavLink href={social.link} target="_blank">
+            <social.icon />
+          </NavLink>
+        </li>
+      );
+    })
+  }
+</ul>
